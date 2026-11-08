@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#351d3a">
+  <meta name="description" content="A little birthday surprise, made with love.">
+  <title>A Little Birthday Surprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="site-shell">
+    <section class="screen intro is-active" id="intro" aria-labelledby="intro-title">
+      <div class="window-scene" aria-hidden="true">
+        <div class="sunset-glow"></div><div class="cityline"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="string-lights"><b></b><b></b><b></b><b></b><b></b></div>
+      </div>
+      <div class="intro-vignette"></div>
+      <div class="intro-layout">
+        <div class="paper-note intro-note" id="intro-note" role="button" tabindex="0" aria-label="A birthday note for you" aria-disabled="true">
+          <p class="eyebrow">A tiny note for the one my heart chose</p>
+          <h1 id="intro-title">Hey, you.<br>Yes, <span>you</span> <em>♡</em></h1>
+          <p class="hand-copy">I couldn't be there today,<br>so I made you something...</p>
+        </div>
+        <div class="intro-center">
+          <p class="tiny-label">Made with love (and probably questionable singing) ♡</p>
+          <button class="primary-button is-locked" id="open-surprise" type="button" aria-label="Open Your Birthday Surprise, currently locked"><span class="play-mark" aria-hidden="true">▶</span> Open Your Birthday Surprise <span class="surprise-heart" id="surprise-heart" aria-hidden="true">♥</span></button>
+          <p class="state-message" id="treasure-hint" aria-live="polite"></p>
+        </div>
+        <div class="birthday-tag paper-note" id="birthday-tag" role="button" tabindex="0" aria-label="For your birthday" aria-disabled="true"><span>For your<br>birthday</span><b>♡</b></div>
+      </div>
+      <div class="window-sill" aria-hidden="true"><span class="candle candle-one"></span><span class="candle candle-two"></span><span class="book-stack"></span></div>
+    </section>
+
+    <section class="screen memories" id="memories" aria-labelledby="memories-title" aria-hidden="true">
+      <div class="memory-backdrop"></div>
+      <header class="memory-heading">
+        <p class="eyebrow">The little things are the big things</p>
+        <h2 id="memories-title">Our little story <span>♡</span></h2>
+        <p class="subtitle">A few favorite moments, kept close.</p>
+      </header>
+      <div class="gallery-layout">
+        <aside class="side-note left-note"><span class="doodle-heart">♡</span><p>15 photos.<br>One little story.</p><span class="scribble"></span></aside>
+        <div class="gallery-stage">
+          <button class="round-arrow previous" type="button" aria-label="Previous photo">‹</button>
+          <div class="photo-stack" aria-live="polite" aria-atomic="true">
+            <div class="polaroid" id="polaroid">
+              <div class="photo-window" id="photo-window"><img id="memory-photo" alt="" draggable="false"><div class="photo-placeholder" id="photo-placeholder"><span aria-hidden="true">✧</span><small>Your photo goes here</small></div></div>
+              <p class="caption" id="photo-caption"></p>
+            </div>
+            <div class="polaroid-shadow shadow-one"></div><div class="polaroid-shadow shadow-two"></div>
+          </div>
+          <button class="round-arrow next" type="button" aria-label="Next photo">›</button>
+          <button class="last-thing" id="last-thing" type="button">One last thing <span>♡</span></button>
+        </div>
+        <aside class="side-note right-note"><span class="doodle-heart">♡</span><p>Thank you<br>for being you.</p><span class="scribble"></span></aside>
+      </div>
+      <div class="memory-footer">
+        <div class="music-card">
+          <button class="music-toggle" type="button" aria-label="Pause guitar music" aria-pressed="true"><span class="pause-icon">Ⅱ</span><span class="play-icon">▶</span></button>
+          <img class="song-cover" src="assets/images/song-cover.png" alt="" aria-hidden="true">
+          <div class="music-info"><span class="music-title">A little song for you ♪</span><span class="music-subtitle">Happy Birthday to You · Juju</span><div class="music-meter" role="progressbar" aria-label="Song progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen finale" id="finale" aria-labelledby="finale-title" aria-hidden="true">
+      <div class="finale-sky" aria-hidden="true"><div class="glow-orb orb-one"></div><div class="glow-orb orb-two"></div><div class="finale-stars"></div><div class="finale-city"></div></div>
+      <p class="finale-side-note">Happy birthday,<br>my love. <span>♡</span></p>
+      <article class="letter paper-note">
+        <p class="eyebrow">Just one more thing…</p>
+        <h2 id="finale-title">One last thing<span>…</span></h2>
+        <p class="letter-intro">There’s something I wanted to tell you properly. <em>♡</em></p>
+        <button class="voice-button" id="voice-button" type="button"><span class="headphones" aria-hidden="true">♬</span><span class="voice-label">Play My Voice Note</span><span class="voice-spinner" aria-hidden="true"></span></button>
+        <p class="voice-status" id="voice-status" aria-live="polite">Whenever you’re ready, press play.</p>
+        <figure class="kinder-polaroid" id="kinder-polaroid" hidden>
+          <span class="photo-sparkle sparkle-one" aria-hidden="true">✦</span>
+          <span class="photo-sparkle sparkle-two" aria-hidden="true">♡</span>
+          <span class="photo-sparkle sparkle-three" aria-hidden="true">✧</span>
+          <span class="photo-sparkle sparkle-four" aria-hidden="true">♡</span>
+          <img src="assets/images/kinder-joy-first.jpg" alt="Her holding her first Kinder Joy">
+          <figcaption>The very first Kinder Joy</figcaption>
+        </figure>
+        <div class="letter-rule"></div>
+        <div class="love-poem" id="love-poem">
+          <h3 class="poem-title">For Shriya</h3>
+          <div class="poem-stanzas">
+            <p>I did not know how deep a heart could run,<br>Till you rose in my life like the morning sun.<br>You lit up the dark and chased away the night,<br>And all my hours bent toward your light.</p>
+            <p>Though every part of you said guard, said stay,<br>You looked at me and still let me stay.<br>Trembling and brave, you opened the door,<br>And I have never wanted anything more.</p>
+            <p>What courage lives in one who trusts like this,<br>Who steps through fear for a stranger's kiss.<br>You gave me a chance when you had none,<br>And my whole heart says you're the one.</p>
+            <p>So let the seasons turn and the roses fade,<br>I'll love you in every promise made.<br>Through the storm and the wait, through the years that flow,<br>My heart is yours, wherever you go.</p>
+            <p class="poem-closing">Happy birthday, Shriya, my love, my own,<br>With you, at last, my heart has found its home.</p>
+          </div>
+        </div>
+        <button class="back-link" id="back-to-photos" type="button">← Back to our photos</button>
+      </article>
+      <p class="finale-tag paper-note">You make<br>life brighter. <span>♡</span></p>
+    </section>
+
+    <div class="treasure-modal" id="video-modal" hidden>
+      <section class="treasure-card video-card" role="dialog" aria-modal="true" aria-label="Birthday video">
+        <video class="birthday-video" id="birthday-video" playsinline preload="metadata"></video>
+        <button class="video-mute" id="video-mute" type="button" aria-label="Mute video" aria-pressed="false">🔊</button>
+        <button class="modal-close video-close" type="button" aria-label="Close video">×</button>
+      </section>
+    </div>
+
+    <div class="treasure-modal" id="key-modal" hidden>
+      <section class="treasure-card paper-note key-card" role="dialog" aria-modal="true" aria-labelledby="key-card-title">
+        <button class="modal-close" type="button" aria-label="Close card">×</button>
+        <h2 class="modal-title" id="key-card-title">A little secret</h2>
+        <p class="secret-copy">Before the surprise, a small secret: I locked my heart a long time ago, and only you ever held the key. Here it is. Use it.</p>
+        <button class="gold-key" id="unlock-key" type="button" aria-label="Use the golden key">🗝</button>
+      </section>
+    </div>
+
+    <div class="persistent-audio" id="audio-control" hidden>
+      <button class="music-toggle floating-toggle" type="button" aria-label="Pause guitar music" aria-pressed="true"><span class="pause-icon">Ⅱ</span><span class="play-icon">▶</span></button>
+      <span class="floating-label">Our song</span>
+    </div>
+    <audio id="guitar-audio" src="assets/audio/guitar.mp3" loop preload="none"></audio>
+    <audio id="voice-audio" src="assets/audio/voice-note.mp3" preload="none"></audio>
+    <div class="toast" id="audio-toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
